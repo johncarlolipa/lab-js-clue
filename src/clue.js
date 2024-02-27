@@ -142,7 +142,17 @@ console.log(mystery);
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery() {
+  const {suspect, weapon, room} = envelope;
+  const {firstName, lastName} = suspect
+
+  return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`;
+
+}
+
+// Test the revealMystery function
+const envelope = pickMystery();
+console.log(revealMystery(envelope));
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
